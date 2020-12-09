@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Character from './Character';
+import { connect } from 'react-redux';
 
 const Characters = ({ characters = [] }) => {
   return (
@@ -12,4 +13,4 @@ const Characters = ({ characters = [] }) => {
   );
 };
 
-export default Characters;
+export default connect(({ characters }) => ({ characters }))(Characters);
